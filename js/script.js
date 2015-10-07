@@ -705,7 +705,8 @@ var mapData = [
                 size: '100%',
                 dataLabels: {
                     enabled: false
-                }
+                },
+                center: ["50%", "50%"]
             }
         },
         title: {

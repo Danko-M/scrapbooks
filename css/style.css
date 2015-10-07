@@ -137,6 +137,9 @@ iframe {
   width:100%;
   position:absolute;
 }
+[id^="donut-chart"] .highcharts-container {
+  margin: 0 auto;
+}
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) {}
