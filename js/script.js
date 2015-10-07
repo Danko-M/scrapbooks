@@ -229,6 +229,8 @@ var mapData = [
         },
         
         xAxis: {
+        		lineWidth: 0,
+    				tickLength: 0,
             type: 'datetime',
             labels: {
 			        enabled: false
@@ -295,6 +297,8 @@ var mapData = [
         },
         
         xAxis: {
+        		lineWidth: 0,
+    				tickLength: 0,
             type: 'datetime',
             labels: {
 			        enabled: false
@@ -361,6 +365,8 @@ var mapData = [
         },
         
         xAxis: {
+        		lineWidth: 0,
+    				tickLength: 0,
             type: 'datetime',
             labels: {
 			        enabled: false
@@ -427,6 +433,8 @@ var mapData = [
         },
         
         xAxis: {
+        		lineWidth: 0,
+    				tickLength: 0,
             type: 'datetime',
             labels: {
 			        enabled: false
@@ -493,6 +501,8 @@ var mapData = [
         },
         
         xAxis: {
+        		lineWidth: 0,
+    				tickLength: 0,
             type: 'datetime',
             labels: {
 			        enabled: false
@@ -559,6 +569,8 @@ var mapData = [
         },
         
         xAxis: {
+        		lineWidth: 0,
+    				tickLength: 0,
             type: 'datetime',
             labels: {
 			        enabled: false
@@ -611,5 +623,113 @@ var mapData = [
             }
         }
     });    
+
+		/* donut chart 01 donut-chart01 */
+
+		Highcharts.setOptions({
+        colors: ['#8edce7', '#ff9900', '#e78129', '#08b9cb']
+    });
+
+    // Create the chart for completion
+    var chart_completion = new Highcharts.Chart({
+        chart: {
+            renderTo: 'donut-chart01',
+            type: 'pie',
+            margin: [0, 0, 0, 0],
+            height: 200,
+            width: 200
+
+        },
+        tooltip: {
+            enabled: false,
+        },
+        plotOptions: {
+            pie: {
+                slicedOffset: 20,
+                size: '100%',
+                dataLabels: {
+                    enabled: false
+                }
+            }
+        },
+        title: {
+            text: 'Average city',
+            align: 'center',
+            verticalAlign: 'middle',
+            style: {
+                fontSize: '9.5px'
+            }
+
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Browsers',
+            data: [ 20, 40,80, 8],
+            innerSize: '70%',
+            showInLegend: false,
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    });
+
+
+
+
+
+
+
+		/* donut chart 01 donut-chart02 */
+		Highcharts.setOptions({
+        colors: [ '#ff9900', '#e78129','#8edce7', '#08b9cb']
+    });
+
+    // Create the chart for completion
+    var chart_completion = new Highcharts.Chart({
+        chart: {
+            renderTo: 'donut-chart02',
+            type: 'pie',
+            margin: [0, 0, 0, 0],
+            height: 200,
+            width: 200
+
+        },
+        tooltip: {
+            enabled: false,
+        },
+        plotOptions: {
+            pie: {
+                slicedOffset: 20,
+                size: '100%',
+                dataLabels: {
+                    enabled: false
+                }
+            }
+        },
+        title: {
+            text: 'Unusual city',
+            align: 'center',
+            verticalAlign: 'middle',
+            style: {
+                fontSize: '9.5px'
+            }
+
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Browsers',
+            data: [ 20, 40,80, 8],
+            innerSize: '70%',
+            showInLegend: false,
+            dataLabels: {
+                enabled: false
+            }
+        }]
+    });
+
 
 });
