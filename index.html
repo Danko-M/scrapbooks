@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Scrapbooks.io</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class="row header">
+        <a href="#" class="logo">Scrapbooks.io</a>
+        <div class="search">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          <input type="search" name="search">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-7 col-sm-offset-5">
+        <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Summary</a></li>
+            <li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">interactive Graphs</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Text</a></li>
+            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Top 50</a></li>
+          </ul>
+        </div>
+      </div><!-- /.row -->
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade" id="home">Summary Tab</div>
+
+        <div role="tabpanel" class="tab-pane fade in active" id="profile">
+          <div>Taipei, Taivan</div>
+          <div class="row">
+          <!-- map section -->
+            <div class="col-sm-5">
+              <iframe src="http://feet3.900feet.com:3004/leaflet_map_sb2/"><p>Your browser does not support iframes.</p>
+              </iframe>
+                
+            </div>
+          <!-- single graph and tags generator section -->
+            <div class="col-sm-7">
+              <div id="highcharts01" class="first-chart"></div>
+              <span class="tags-title">X AXIS</span>
+              <input type="text" class="form-control" id="tokenfield"  />
+              <span class="tags-title">Y AXIS</span>
+              <input type="text" class="form-control" id="tokenfield-02" />
+            </div>
+          </div><!-- /.row -->
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="text-center"><strong>Data Range:</strong> January 1, 2016 January 7th, 2016</div>
+              <div class="row no-p">
+                <div class="col-sm-4" id="vector-map">vector map</div>
+                <div class="col-sm-4">
+                  <div class="text-center">Facebook</div>
+                  <div class="spline-chart-container">
+                    <div id="spline-chart01"></div>
+                  </div>
+                  <div class="spline-chart-container">
+                    <div id="spline-chart02"></div>
+                  </div>
+                  <div class="spline-chart-container">
+                    <div id="spline-chart03"></div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="text-center">Instagram</div>
+                  <div class="spline-chart-container">
+                    <div id="spline-chart04"></div>
+                  </div>
+                  <div class="spline-chart-container">
+                    <div id="spline-chart05"></div>
+                  </div>
+                  <div class="spline-chart-container">
+                    <div id="spline-chart06"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-p">
+                <div class="col-sm-6">donut chart 01</div>
+                <div class="col-sm-6">donut chart 02</div>
+              </div>
+            </div>
+
+            <div class="col-sm-7 clearfix">
+              <a href="#01" class="user"><img src="http://placehold.it/128x128/c3da4b/ffffff" alt="..."></a>
+              <a href="#02" class="user"><img src="http://placehold.it/128x128/923c87/ffffff" alt="..."></a>
+              <a href="#03" class="user"><img src="http://placehold.it/128x128/36c5e3/ffffff" alt="..."></a>
+              <a href="#04" class="user"><img src="http://placehold.it/128x128/5561ab/ffffff" alt="..."></a>
+              <a href="#05" class="user"><img src="http://placehold.it/128x128/e78129/ffffff" alt="..."></a>
+              <a href="#06" class="user"><img src="http://placehold.it/128x128/f9b236/ffffff" alt="..."></a>
+              <a href="#01" class="user"><img src="http://placehold.it/128x128/c3da4b/ffffff" alt="..."></a>
+              <a href="#02" class="user"><img src="http://placehold.it/128x128/923c87/ffffff" alt="..."></a>
+              <a href="#03" class="user"><img src="http://placehold.it/128x128/36c5e3/ffffff" alt="..."></a>
+              <a href="#04" class="user"><img src="http://placehold.it/128x128/5561ab/ffffff" alt="..."></a>
+              <a href="#05" class="user"><img src="http://placehold.it/128x128/e78129/ffffff" alt="..."></a>
+              <a href="#06" class="user"><img src="http://placehold.it/128x128/f9b236/ffffff" alt="..."></a>
+              <a href="#01" class="user"><img src="http://placehold.it/128x128/c3da4b/ffffff" alt="..."></a>
+              <a href="#02" class="user"><img src="http://placehold.it/128x128/923c87/ffffff" alt="..."></a>
+              <a href="#03" class="user"><img src="http://placehold.it/128x128/36c5e3/ffffff" alt="..."></a>
+              <a href="#04" class="user"><img src="http://placehold.it/128x128/5561ab/ffffff" alt="..."></a>
+              <a href="#05" class="user"><img src="http://placehold.it/128x128/e78129/ffffff" alt="..."></a>
+              <a href="#06" class="user"><img src="http://placehold.it/128x128/f9b236/ffffff" alt="..."></a>
+              <a href="#01" class="user"><img src="http://placehold.it/128x128/c3da4b/ffffff" alt="..."></a>
+              <a href="#02" class="user"><img src="http://placehold.it/128x128/923c87/ffffff" alt="..."></a>
+              <a href="#03" class="user"><img src="http://placehold.it/128x128/36c5e3/ffffff" alt="..."></a>
+              <a href="#04" class="user"><img src="http://placehold.it/128x128/5561ab/ffffff" alt="..."></a>
+              <a href="#05" class="user"><img src="http://placehold.it/128x128/e78129/ffffff" alt="..."></a>
+              <a href="#06" class="user"><img src="http://placehold.it/128x128/f9b236/ffffff" alt="..."></a>
+              <a href="#01" class="user"><img src="http://placehold.it/128x128/c3da4b/ffffff" alt="..."></a>
+              <a href="#02" class="user"><img src="http://placehold.it/128x128/923c87/ffffff" alt="..."></a>
+              <a href="#03" class="user"><img src="http://placehold.it/128x128/36c5e3/ffffff" alt="..."></a>
+              <a href="#04" class="user"><img src="http://placehold.it/128x128/5561ab/ffffff" alt="..."></a>
+              <a href="#05" class="user"><img src="http://placehold.it/128x128/e78129/ffffff" alt="..."></a>
+              <a href="#06" class="user"><img src="http://placehold.it/128x128/f9b236/ffffff" alt="..."></a>
+            </div>
+          </div><!-- /.row -->          
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="messages">Text Tab</div>
+        <div role="tabpanel" class="tab-pane fade" id="settings">Top 50 Tab</div>
+      </div>
+
+    </div><!-- /.container-fluid -->
+
+    
+
+
+    
+  
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="http://code.highcharts.com/mapdata/countries/tw/tw-all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.min.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
