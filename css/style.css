@@ -82,6 +82,7 @@ input[type="search"]:focus {
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:focus,
 .nav-tabs>li.active>a:hover {
+  color: #000;
   border: 1px solid transparent;
 }
 
