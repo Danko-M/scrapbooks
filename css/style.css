@@ -1,10 +1,23 @@
+/* 
+Author: Danko Milutinovic
+Desctiption: Stylesheet for Scrapbooks.io web application
+Contact:  
+        http://danko-m.github.io/ ,
+        dankomilutinovic@gmail.com, 
+        https://rs.linkedin.com/pub/danko-milutinovic/a3/675/778         
+*/
+
 .m-t-20 {
   margin-top: 20px;
 }
+
 .no-p {
   padding: 0;
 }
+
+
 /* ----- */
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -45,10 +58,14 @@ input[type="search"] {
 input[type="search"]:focus {
   outline: none;
 }
+
+
 /*     tabs     */
+
 .nav-tabs {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
+
 .nav>li>a {
   color: #636363;
 }
@@ -61,10 +78,16 @@ input[type="search"]:focus {
 .nav-tabs>li {
   width: 49%;
 }
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
   border: 1px solid transparent;
 }
+
+
 /* ---------- */
+
 iframe {
   width: 100%;
   height: 492px;
@@ -75,12 +98,16 @@ iframe {
   width: 100%;
   height: 400px;
 }
+
+
 /* tags generator related styles */
+
 .tokenfield {
   background: #e6e6e6;
   margin-bottom: 6px;
   margin-left: 70px;
 }
+
 .tokenfield .token {
   height: auto;
   padding: 5px;
@@ -102,6 +129,7 @@ iframe {
 .tokenfield .close:hover {
   opacity: 1;
 }
+
 .tags-title {
   float: left;
   margin-top: 15px;
@@ -110,7 +138,10 @@ iframe {
 .form-control {
   width: auto;
 }
+
+
 /* ------------------ */
+
 .user {
   float: left;
   width: 25%;
@@ -121,33 +152,43 @@ iframe {
   height: auto;
   opacity: 1;
 }
+
 .user img:hover {
   opacity: .85;
 }
 
+
 /* highcharts elements */
+
 svg > text {
   display: none;
 }
+
 [id^="donut-chart"] svg > text {
   display: block !important;
 }
+
 .highcharts-legend,
 .highcharts-button {
   display: none;
 }
+
 .spline-chart-container {
   position: relative;
   min-height: 120px;
 }
-[id^="spline-chart"]{
-  height:100%;
-  width:100%;
-  position:absolute;
+
+[id^="spline-chart"] {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
+
 [id^="donut-chart"] .highcharts-container {
   margin: 0 auto;
 }
+
+
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: 320px) {}
@@ -182,7 +223,9 @@ svg > text {
   .nav-tabs {
     padding-bottom: 0;
   }
-  .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  .nav-tabs>li.active>a,
+  .nav-tabs>li.active>a:focus,
+  .nav-tabs>li.active>a:hover {
     border: 1px solid #ddd;
     border-bottom-color: transparent;
   }
@@ -196,7 +239,6 @@ svg > text {
   .user {
     width: 12.5%;
   }
-  
 }
 
 

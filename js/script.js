@@ -1,3 +1,12 @@
+/* 
+Author: Danko Milutinovic
+Desctiption: Script for Scrapbooks.io web application interface
+Contact:  
+        http://danko-m.github.io/ ,
+        dankomilutinovic@gmail.com, 
+        https://rs.linkedin.com/pub/danko-milutinovic/a3/675/778         
+*/
+
 $(function() {
 	// Scatter plot
   $('#highcharts01').highcharts({
