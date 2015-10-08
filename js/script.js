@@ -1,4 +1,5 @@
 $(function() {
+	// Scatter plot
   $('#highcharts01').highcharts({
     xAxis: {
       categories: ['#bluesky', '#trash', '#friendly', '#awesome', '#crowded', '#food', '#greatnight'],
@@ -46,11 +47,17 @@ $(function() {
 
     plotOptions: {
       series: {
-        lineWidth: 0
+        lineWidth: 0,
+        name : 'Scatter plot'
+      },
+      tooltip: {
+        headerFormat: '<b>{series.name}</b><br>',
+        pointFormat: '{point.x} cm, {point.y} kg'
       }
     },
 
     chart: {
+    	type: 'scatter',
       events: {
         load: function() {
           // show tooltip on 4th point
@@ -74,7 +81,9 @@ $(function() {
       }
     }]
   });
+	
 
+	// tags generator
   $('#tokenfield').tokenfield({
     tokens: ["#nightmarket"]
   });
@@ -90,7 +99,7 @@ $(function() {
   });
 
       
-
+// vector map
 var mapData = [
         {
             "hc-key": "tw-pt",
@@ -248,10 +257,7 @@ var mapData = [
             gridLineWidth: 0,
             alternateGridColor: null
             
-        },
-        tooltip: {
-            valueSuffix: ' m/s'
-        },
+        },        
         plotOptions: {
             spline: {
                 lineWidth: 4,
@@ -284,7 +290,7 @@ var mapData = [
         }
     });       
 
-		/* spline 02 */
+		/* spline chart 02 */
 		$('#spline-chart02').highcharts({
      		legend: {
 		      enabled: false
@@ -316,9 +322,6 @@ var mapData = [
             gridLineWidth: 0,
             alternateGridColor: null
             
-        },
-        tooltip: {
-            valueSuffix: ' m/s'
         },
         plotOptions: {
             spline: {
@@ -352,7 +355,7 @@ var mapData = [
         }
     });    
 
-		/* spline 03 */
+		/* spline chart 03 */
 		$('#spline-chart03').highcharts({
      		legend: {
 		      enabled: false
@@ -385,8 +388,69 @@ var mapData = [
             alternateGridColor: null
             
         },
-        tooltip: {
-            valueSuffix: ' m/s'
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2015, 4, 31, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'Hestavollane',
+            color: '#E78129',
+            data: [ 4.2, 0.2, 0.8, 10.9, 11.5, 11.6, 11.1, 12, 12.3, 6.0, 5.0, 1, 1.3, 1.5, 2.9, 10.0, 9.0, 6.0, 7.5, 7.0, 4.5, 4.5, 4.5, 4, 3.1, 2.7, 4, 2.7, 2.3, 2.3, 4.1, 7.7, 7.1, 5.6, 6.1, 5.8, 8.6, 7.2, 9, 10.7, 9.4, 9.8, 9.6, 9.8, 9.5, 8.5, 7.4, 7.6]
+
+        }, {
+            name: 'Vik',
+            color: '#e2e2e2',
+            data: [0, 0, 3.0, 4.0, 7.0, 3.0, 0, 0, 0.2, 0, 5.0, 7.0, 6.5, 6.0, 0, 0.1, 0.6, 0.7, 0.8, 0.6, 0.1, 0, 0, 0, 0.2, 0.1, 0, 0.3, 0, 0.1, 0.2, 0.1, 0.3, 0.3, 0, 3.1, 9, 6, 4, 7, 2.1, 1, 2.3, 1.9, 1.2, 0.7, 1.3, 0.4, 0.3]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });   
+    /* spline chart 04 */
+		$('#spline-chart04').highcharts({
+     		legend: {
+		      enabled: false
+		    },
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: null
+        },
+        
+        xAxis: {
+        		lineWidth: 0,
+    				tickLength: 0,
+            type: 'datetime',
+            labels: {
+			        enabled: false
+			      },
+			      title: "null"
+        },
+        yAxis: {
+            title: {
+                text: null
+            },
+            labels: {
+			        enabled: false
+			      },
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null
+            
         },
         plotOptions: {
             spline: {
@@ -418,7 +482,7 @@ var mapData = [
                 fontSize: '10px'
             }
         }
-    });    
+    });     
 
 // spline chart 05
      $('#spline-chart05').highcharts({
@@ -453,9 +517,6 @@ var mapData = [
             alternateGridColor: null
             
         },
-        tooltip: {
-            valueSuffix: ' m/s'
-        },
         plotOptions: {
             spline: {
                 lineWidth: 4,
@@ -488,7 +549,7 @@ var mapData = [
         }
     });       
 
-		/* spline 06 */
+		/* spline chart 06 */
 		$('#spline-chart06').highcharts({
      		legend: {
 		      enabled: false
@@ -520,9 +581,6 @@ var mapData = [
             gridLineWidth: 0,
             alternateGridColor: null
             
-        },
-        tooltip: {
-            valueSuffix: ' m/s'
         },
         plotOptions: {
             spline: {
@@ -556,78 +614,12 @@ var mapData = [
         }
     });    
 
-		/* spline 04 */
-		$('#spline-chart04').highcharts({
-     		legend: {
-		      enabled: false
-		    },
-        chart: {
-            type: 'spline'
-        },
-        title: {
-            text: null
-        },
-        
-        xAxis: {
-        		lineWidth: 0,
-    				tickLength: 0,
-            type: 'datetime',
-            labels: {
-			        enabled: false
-			      },
-			      title: null
-        },
-        yAxis: {
-            title: {
-                text: null
-            },
-            labels: {
-			        enabled: false
-			      },
-            minorGridLineWidth: 0,
-            gridLineWidth: 0,
-            alternateGridColor: null
-            
-        },
-        tooltip: {
-            valueSuffix: ' m/s'
-        },
-        plotOptions: {
-            spline: {
-                lineWidth: 4,
-                states: {
-                    hover: {
-                        lineWidth: 5
-                    }
-                },
-                marker: {
-                    enabled: false
-                },
-                pointInterval: 3600000, // one hour
-                pointStart: Date.UTC(2015, 4, 31, 0, 0, 0)
-            }
-        },
-        series: [{
-            name: 'Hestavollane',
-            color: '#E78129',
-            data: [ 4.2, 0.2, 0.8, 10.9, 11.5, 11.6, 11.1, 12, 12.3, 6.0, 5.0, 1, 1.3, 1.5, 2.9, 10.0, 9.0, 6.0, 7.5, 7.0, 4.5, 4.5, 4.5, 4, 3.1, 2.7, 4, 2.7, 2.3, 2.3, 4.1, 7.7, 7.1, 5.6, 6.1, 5.8, 8.6, 7.2, 9, 10.7, 9.4, 9.8, 9.6, 9.8, 9.5, 8.5, 7.4, 7.6]
+		
 
-        }, {
-            name: 'Vik',
-            color: '#e2e2e2',
-            data: [0, 0, 3.0, 4.0, 7.0, 3.0, 0, 0, 0.2, 0, 5.0, 7.0, 6.5, 6.0, 0, 0.1, 0.6, 0.7, 0.8, 0.6, 0.1, 0, 0, 0, 0.2, 0.1, 0, 0.3, 0, 0.1, 0.2, 0.1, 0.3, 0.3, 0, 3.1, 9, 6, 4, 7, 2.1, 1, 2.3, 1.9, 1.2, 0.7, 1.3, 0.4, 0.3]
-        }],
-        navigation: {
-            menuItemStyle: {
-                fontSize: '10px'
-            }
-        }
-    });    
-
-		/* donut chart 01 donut-chart01 */
+		/* donut chart 01 */
 
 		Highcharts.setOptions({
-        colors: ['#8edce7', '#ff9900', '#e78129', '#08b9cb']
+        colors: ['#dddddd', '#09b8cb', '#fa4e1c', '#fe9f05', '#b1b1b1']
     });
 
     // Create the chart for completion
@@ -640,12 +632,8 @@ var mapData = [
             width: 200
 
         },
-        tooltip: {
-            enabled: false,
-        },
         plotOptions: {
             pie: {
-                slicedOffset: 20,
                 size: '100%',
                 dataLabels: {
                     enabled: false
@@ -657,17 +645,16 @@ var mapData = [
             align: 'center',
             verticalAlign: 'middle',
             style: {
-                fontSize: '9.5px'
+                fontSize: '14px'
             }
-
         },
         credits: {
             enabled: false
         },
         series: [{
-            name: 'Browsers',
-            data: [ 20, 40,80, 8],
-            innerSize: '70%',
+            name: 'Amount',
+            data: [[ 'Facebook', 20], ['Twitter', 15],['Instagram', 25],['Pinterest', 2], ['Youtube', 35]],
+            innerSize: '85%',
             showInLegend: false,
             dataLabels: {
                 enabled: false
@@ -681,10 +668,7 @@ var mapData = [
 
 
 
-		/* donut chart 01 donut-chart02 */
-		Highcharts.setOptions({
-        colors: [ '#ff9900', '#e78129','#8edce7', '#08b9cb']
-    });
+		/* donut chart 02 */
 
     // Create the chart for completion
     var chart_completion = new Highcharts.Chart({
@@ -696,12 +680,9 @@ var mapData = [
             width: 200
 
         },
-        tooltip: {
-            enabled: false,
-        },
         plotOptions: {
             pie: {
-                slicedOffset: 20,
+                // slicedOffset: 20,
                 size: '100%',
                 dataLabels: {
                     enabled: false
@@ -710,11 +691,11 @@ var mapData = [
             }
         },
         title: {
-            text: 'Unusual city',
+            text: 'Special city',
             align: 'center',
             verticalAlign: 'middle',
             style: {
-                fontSize: '9.5px'
+                fontSize: '14px'
             }
 
         },
@@ -722,9 +703,9 @@ var mapData = [
             enabled: false
         },
         series: [{
-            name: 'Browsers',
-            data: [ 20, 40,80, 8],
-            innerSize: '70%',
+            name: 'Amount',
+            data: [ ['First part', 40], ['Second part', 60]],
+            innerSize: '85%',
             showInLegend: false,
             dataLabels: {
                 enabled: false

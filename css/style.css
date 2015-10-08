@@ -1,4 +1,6 @@
-
+.m-t-20 {
+  margin-top: 20px;
+}
 .no-p {
   padding: 0;
 }
@@ -124,6 +126,12 @@ iframe {
 }
 
 /* highcharts elements */
+svg > text {
+  display: none;
+}
+[id^="donut-chart"] svg > text {
+  display: block !important;
+}
 .highcharts-legend,
 .highcharts-button {
   display: none;
@@ -132,7 +140,7 @@ iframe {
   position: relative;
   min-height: 120px;
 }
-[id^="spline-char"]{
+[id^="spline-chart"]{
   height:100%;
   width:100%;
   position:absolute;
