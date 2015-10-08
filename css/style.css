@@ -265,8 +265,12 @@ svg > text {
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
+  #interactive-graphs > .row > [class^="col-sm"]{
+    padding-left: 0;
+    padding-right: 0;
+  }
   .scatter-chart-container {
-    padding: 0 80px;
+    padding: 0 80px !important;
   }
   .user img {
     opacity: 1;
