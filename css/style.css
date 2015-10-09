@@ -230,10 +230,10 @@ svg > text {
     border: 1px solid transparent;
     border-bottom-color: #000;
   }
-/*  .nav>li>a:hover {
-    background-color: #e78129;
-    color: #fff;
-  }*/
+  iframe {
+    height: 520px;
+  }
+
   .nav-tabs>li {
     width: auto;
   }
