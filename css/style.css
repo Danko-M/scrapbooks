@@ -240,6 +240,13 @@ svg > text {
   .user {
     width: 12.5%;
   }
+  .scatter-chart-container {
+    padding: 0 20px !important;
+  }
+  #interactive-graphs > .row > [class^="col-sm"]{
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 
@@ -266,10 +273,6 @@ svg > text {
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: 1200px) {
-  #interactive-graphs > .row > [class^="col-sm"]{
-    padding-left: 0;
-    padding-right: 0;
-  }
   .scatter-chart-container {
     padding: 0 80px !important;
   }
