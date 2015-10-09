@@ -708,19 +708,5 @@ $(function() {
     }]
   });
 
-  $.ajax({
-  type: 'GET',
-  url: 'http://rest.learncode.academy/api/johnbob/friends',
-  success: function(data) {
-    console.log("I have friends!", data); //returns all of johnbob's friends
-  }
-});
-
-  $.ajax({
-  type: 'GET',
-  url: 'http://feet2.900feet.com:3003/api/v1/',
-  success: function(data) {
-    console.log(data);
-  }
-});
+  
 });
