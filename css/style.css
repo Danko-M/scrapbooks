@@ -215,6 +215,9 @@ svg > text {
   .tokenfield .token-input {
     width: 200px !important;
   }
+  .user {
+    width: 12.5%;
+  }
 }
 
 
@@ -236,9 +239,6 @@ svg > text {
 
   .nav-tabs>li {
     width: auto;
-  }
-  .user {
-    width: 12.5%;
   }
   .scatter-chart-container {
     padding: 0 20px !important;
